@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
-
-const connect=mongoose.connect("mongodb://127.0.0.1:27017/google_notes")
+require("dotenv").config()
+const connect=mongoose.connect(process.env.mongoURL)
 
 module.exports={
     connect
